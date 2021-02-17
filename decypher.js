@@ -32,12 +32,6 @@ for (let i = 0; i < etaoinshrdlu.length; i++) {
 }
 console.log(`Probable keys = ${keys}`);
 
-// WIP
-let mapMethod = cipher.map(function(letter) {
-    String.fromCharCode(encryptChar(letter, 26 - 17));
-});
-console.log(`map Method = ${mapMethod}`);
-
 // Decrypt the ciphered text `tab` with `key`
 function decypher(tab, key) {
     let res = '';
@@ -48,8 +42,13 @@ function decypher(tab, key) {
 
 // List the most probable deciphered texts
 function listDecypher(tab, keys) {
-    for (key of keys)
-	console.log(`Shift of ${key} : ${decypher(tab, key)}`);
+    for (key of keys) {
+	let mapMethod = cipher.map(function(letter) {
+	    return String.fromCharCode(encryptChar(letter, 26 - key));
+	}).join('');
+	console.log(`[DECYPHER] Shift of ${key} : ${decypher(tab, key)}`);
+	console.log(`[MAPMETHOD] Shift of ${key} : ${mapMethod}`);
+    }
 }
 
 console.log(listDecypher(cipher, keys));
