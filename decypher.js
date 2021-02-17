@@ -29,21 +29,31 @@ for (let i = 0; i < etaoinshrdlu.length; i++) {
 }
 console.log(`Probable keys = ${keys}`);
 
-// function decypher(tab, key) {
-//     tab.map(function(letter) {
-// 	console.log(String.fromCharCode(encryptChar(letter, key)));
-//     })
-// }
+for (var i = 0; i < keys.length; i++) {
+    let mapMethod = cipher.map(function(letter) {
+    String.fromCharCode(encryptChar(letter, 26 - keys[i]));
+    });
+    // console.log(mapMethod);
+}
+
 
 function decypher(tab, key) {
     let res = '';
-	for (let i = 0; i < tab.length; i++) {
-	    res += String.fromCharCode(encryptChar(tab[i], 26 - key));
+	for (letter of tab) {
+	    res += String.fromCharCode(encryptChar(letter, 26 - key));
 	}
     return res;
 }
 
-console.log(`Deciphered : ${decypher(cipher, keys[0])}`);
+function listDecipher(tab, keys) {
+    for (key of keys) {
+	console.log(`Shift of ${key} : ${decypher(tab, key)}`);
+    }
+}
+
+console.log(listDecipher(cipher, keys));
+// console.log(`Decyphered : ${decypher(cipher, keys[0])}`);
+// console.log(`Deciphered : ${decipher(cipher, keys[0])}`);
 
 // 'HELLO'.charCodeAt(0)
 // String.fromCharCode(72)
