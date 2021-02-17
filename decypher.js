@@ -4,10 +4,13 @@ const cipherText = 'YRMV PFL VMVI YRU R UIVRD EVF KYRK PFL NVIV JF JLIV NRJ IVRC
 let cipher = cipherText.replaceAll(' ', '').split('');
 let alphabet = Array(26).fill(0);
 
+// Returns ASCII decimal code of `c` shifted by `n`
 function encryptChar(c, n) {
     return (((c.charCodeAt(0) - 65) + n) % 26) + 65 ;
 }
 
+// Returns an array with the number of letters in the ciphered text
+// tab[0] = number of A
 function countLetters(tab) {
     for (letter of cipher) {
 	alphabet[letter.charCodeAt()-65] += 1;
@@ -25,38 +28,32 @@ console.log(`Most frequent letter in cypher text : ${String.fromCharCode(freqLet
 
 let keys = Array(etaoinshrdlu.length).fill(0);
 for (let i = 0; i < etaoinshrdlu.length; i++) {
-    keys[i] = freqLetterCode - (etaoinshrdlu[i].charCodeAt(0) - 65);
+    keys[i] = freqLetterCode - (etaoinshrdlu[i].charCodeAt() - 65);
 }
 console.log(`Probable keys = ${keys}`);
 
-for (var i = 0; i < keys.length; i++) {
-    let mapMethod = cipher.map(function(letter) {
-    String.fromCharCode(encryptChar(letter, 26 - keys[i]));
-    });
-    // console.log(mapMethod);
-}
+// WIP
+let mapMethod = cipher.map(function(letter) {
+    String.fromCharCode(encryptChar(letter, 26 - 17));
+});
+console.log(`map Method = ${mapMethod}`);
 
-
+// Decrypt the ciphered text `tab` with `key`
 function decypher(tab, key) {
     let res = '';
-	for (letter of tab) {
+	for (letter of tab)
 	    res += String.fromCharCode(encryptChar(letter, 26 - key));
-	}
     return res;
 }
 
-function listDecipher(tab, keys) {
-    for (key of keys) {
+// List the most probable deciphered texts
+function listDecypher(tab, keys) {
+    for (key of keys)
 	console.log(`Shift of ${key} : ${decypher(tab, key)}`);
-    }
 }
 
-console.log(listDecipher(cipher, keys));
-// console.log(`Decyphered : ${decypher(cipher, keys[0])}`);
+console.log(listDecypher(cipher, keys));
 // console.log(`Deciphered : ${decipher(cipher, keys[0])}`);
-
-// 'HELLO'.charCodeAt(0)
-// String.fromCharCode(72)
 
 // lines = lines.map(function(line) {
 //     return line.split(' ').length;
