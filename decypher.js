@@ -1,6 +1,5 @@
 const cipherText = 'YRMV PFL VMVI YRU R UIVRD EVF KYRK PFL NVIV JF JLIV NRJ IVRC NYRK ZW PFL NVIV LERSCV KF NRBV WIFD KYRK UIVRD YFN NFLCU PFL BEFN KYV UZWWVIVETV SVKNVVE KYV UIVRD NFICU REU KYV IVRC NFICU';
 
-
 let cipher = cipherText.replaceAll(' ', '').split('');
 let alphabet = Array(26).fill(0);
 
@@ -52,12 +51,3 @@ function listDecypher(tab, keys) {
 }
 
 console.log(listDecypher(cipher, keys));
-// console.log(`Deciphered : ${decipher(cipher, keys[0])}`);
-
-// lines = lines.map(function(line) {
-//     return line.split(' ').length;
-// })
-
-// upperWords = sentence.map(function(word) {
-//     console.log(`mot: ${word.toUpperCase()}`);
-// })
