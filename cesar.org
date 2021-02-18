@@ -12,3 +12,56 @@
 #+begin_src js
 process.argv
 #+end_src
+
+Retourne le tableau des arguments passés en ligne de commande 
+
+#+begin_src js
+process.argv[0]
+#+end_src
+
+Pour récupérer le premier argument.
+
+* Variables 
+
+** text 
+
+Un tableau dont chaque élément est un caractère (majuscule) ou bien un espace.
+
+** key
+
+La clé (sous la forme d'un nombre).
+Cette variable n'est utile que pour chiffrer uniquement !
+
+** alphabet
+
+Un tableau de 26 éléments. Chaque "case" représente le nombre de fois qu'une lettre est présente dans le texte.
+Example : 
+alphabet[0] est la première case du tableau, la valeur représente le nombre de 'A' dans le texte chiffré.
+alphabet[1] est la deuxième case du tableau, la valeur représente le nombre de 'B' dans le texte chiffré.
+…
+alphabet[25] est la vingt-sixième case du tableau, la valeur représente le nombre de 'Z' dans le texte chiffré.
+
+** etaoinshrdlu
+
+Un tableau avec les lettres les plus fréquentes en anglais. (De longueur 12)
+
+** freqLetterCode
+
+C'est l'index du tableau alphabet pour la lettre la plus présente dans le texte chiffré.
+
+** keys
+
+Un tableau de même longueur que etaoinshrdlu qui contient les décalages (clés) les plus probables.
+
+* Fonctions
+
+** encryptChar
+
+** cypher
+
+** decypher
+
+** listDecypher
+
+
+
