@@ -24,10 +24,7 @@ function cypher(tab, key) {
 
 // Decrypt the ciphered text `tab` with `key`
 function decypher(tab, key) {
-    let res = '';
-	for (letter of tab)
-	    res += String.fromCharCode(encryptChar(letter, 26 - key));
-    return res;
+    return cypher(tab, 26 - key);
 }
 
 // List the most probable deciphered texts
