@@ -9,9 +9,10 @@ let text = process.argv[2].toUpperCase().split('');
 
 // Returns ASCII decimal code of `c` shifted by `n`
 const encryptChar = (c, n) => {
-    if (c.charCodeAt() == 32)
-	return 32;
-    return (((c.charCodeAt(0) - 65) + n) % 26) + 65 ;
+    let asciiCode = c.charCodeAt();
+    if (asciiCode == 32 || asciiCode == 46)
+	return asciiCode;
+    return (((asciiCode - 65) + n) % 26) + 65 ;
 }
 
 // Crypt the ciphered text `tab` with `key`
