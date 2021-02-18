@@ -1,24 +1,24 @@
 
 # Table of Contents
 
-1.  [Analyse Fréquentielle](#org6ac703b)
-2.  [(Optionnel : récupérer les arguments de la ligne de commande)](#orgbea9331)
-3.  [Variables](#org777fed4)
-    1.  [text](#org812fc79)
-    2.  [key](#org9fcbf2b)
-    3.  [alphabet](#orga8ea9ec)
-    4.  [etaoinshrdlu](#org6a47725)
-    5.  [freqLetterCode](#orgff273ff)
-    6.  [keys](#org1635e03)
-4.  [Fonctions](#orgb1b514a)
-    1.  [encryptChar](#org1b2a1d2)
-    2.  [cypher](#orgb6d46d7)
-    3.  [decypher](#orge779e00)
-    4.  [listDecypher](#org70a13ba)
+1.  [Analyse Fréquentielle](#org8dbfc62)
+2.  [(Optionnel : récupérer les arguments de la ligne de commande)](#org36d6014)
+3.  [Variables](#orgbee1510)
+    1.  [text](#orgc885270)
+    2.  [key](#org12bd49c)
+    3.  [alphabet](#org7ee79b4)
+    4.  [etaoinshrdlu](#org0fb105b)
+    5.  [freqLetterCode](#org10c29a8)
+    6.  [keys](#orgaffaae1)
+4.  [Fonctions](#orgc1928f7)
+    1.  [encryptChar](#org3b26e4a)
+    2.  [cypher](#org261026c)
+    3.  [decypher](#org091409a)
+    4.  [listDecypher](#orgdd5cd7f)
 
 
 
-<a id="org6ac703b"></a>
+<a id="org8dbfc62"></a>
 
 # Analyse Fréquentielle
 
@@ -27,7 +27,7 @@
 [Etaoin shrdlu](https://en.wikipedia.org/wiki/Etaoin_shrdlu)   
 
 
-<a id="orgbea9331"></a>
+<a id="org36d6014"></a>
 
 # (Optionnel : récupérer les arguments de la ligne de commande)
 
@@ -40,19 +40,19 @@ Retourne le tableau des arguments passés en ligne de commande
 Pour récupérer le premier argument.  
 
 
-<a id="org777fed4"></a>
+<a id="orgbee1510"></a>
 
 # Variables
 
 
-<a id="org812fc79"></a>
+<a id="orgc885270"></a>
 
 ## text
 
 Un tableau dont chaque élément est un caractère (majuscule) ou bien un espace.  
 
 
-<a id="org9fcbf2b"></a>
+<a id="org12bd49c"></a>
 
 ## key
 
@@ -60,7 +60,7 @@ La clé (sous la forme d'un nombre).
 Cette variable n'est utile que pour chiffrer uniquement !  
 
 
-<a id="orga8ea9ec"></a>
+<a id="org7ee79b4"></a>
 
 ## alphabet
 
@@ -72,48 +72,77 @@ alphabet[1] est la deuxième case du tableau, la valeur représente le nombre de
 alphabet[25] est la vingt-sixième case du tableau, la valeur représente le nombre de 'Z' dans le texte chiffré.  
 
 
-<a id="org6a47725"></a>
+<a id="org0fb105b"></a>
 
 ## etaoinshrdlu
 
 Un tableau avec les lettres les plus fréquentes en anglais. (De longueur 12)  
 
 
-<a id="orgff273ff"></a>
+<a id="org10c29a8"></a>
 
 ## freqLetterCode
 
 C'est l'index du tableau alphabet pour la lettre la plus présente dans le texte chiffré.  
 
 
-<a id="org1635e03"></a>
+<a id="orgaffaae1"></a>
 
 ## keys
 
 Un tableau de même longueur que etaoinshrdlu qui contient les décalages (clés) les plus probables.  
+Cette variable n'est utile que pour dechiffrer uniquement !  
 
 
-<a id="orgb1b514a"></a>
+<a id="orgc1928f7"></a>
 
 # Fonctions
 
 
-<a id="org1b2a1d2"></a>
+<a id="org3b26e4a"></a>
 
 ## encryptChar
 
+Paramètres :  
 
-<a id="orgb6d46d7"></a>
+-   c : charactère
+-   n : nombre entier
+
+Renvoie : Le code décimal ASCII de c + n, en restant entre 'A' et 'Z'  
+
+Fonction qui chiffre un caractère c en le décalant de n.  
+
+
+<a id="org261026c"></a>
 
 ## cypher
 
+Paramètres :  
 
-<a id="orge779e00"></a>
+-   tab : tableau de charactères
+-   key : nombre entier
+
+Renvoie : une chaine de charactère  
+
+Fonction qui chiffre un message à partir du tableau tab avec la clé key.  
+
+
+<a id="org091409a"></a>
 
 ## decypher
 
+L'inverse de la fonction cypher.  
 
-<a id="org70a13ba"></a>
+
+<a id="orgdd5cd7f"></a>
 
 ## listDecypher
+
+Paramètre :  
+
+-   tab : tableau de charactères
+
+Renvoie : rien, affiche 12 textes déchiffrés avec les 12 clés générées.  
+
+Déchiffre le texte chiffré avec les clés les plus probables (hypothèse : texte en anglais).  
 

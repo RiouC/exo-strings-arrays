@@ -52,16 +52,41 @@ C'est l'index du tableau alphabet pour la lettre la plus présente dans le texte
 ** keys
 
 Un tableau de même longueur que etaoinshrdlu qui contient les décalages (clés) les plus probables.
+Cette variable n'est utile que pour dechiffrer uniquement !
 
 * Fonctions
 
 ** encryptChar
 
+Paramètres : 
+- c : charactère
+- n : nombre entier
+
+Renvoie : Le code décimal ASCII de c + n, en restant entre 'A' et 'Z'
+
+Fonction qui chiffre un caractère c en le décalant de n.
+
 ** cypher
+
+Paramètres : 
+- tab : tableau de charactères
+- key : nombre entier
+
+Renvoie : une chaine de charactère
+
+Fonction qui chiffre un message à partir du tableau tab avec la clé key.
 
 ** decypher
 
+L'inverse de la fonction cypher.
+
 ** listDecypher
 
+Paramètre : 
+- tab : tableau de charactères
+
+Renvoie : rien, affiche 12 textes déchiffrés avec les 12 clés générées.
+
+Déchiffre le texte chiffré avec les clés les plus probables (hypothèse : texte en anglais).
 
 
