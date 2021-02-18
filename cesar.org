@@ -1,7 +1,7 @@
 
 #+OPTIONS: \n:t
 
-[[https://asciinema.org/a/S3dGEePp6UpjI2RsAJm03Df3f][asciinema]]
+[[https://asciinema.org/a/0njIqEMp5DKaKJkdlFfiRF1iI][asciinema]]
 
 * Analyse Fréquentielle
 
