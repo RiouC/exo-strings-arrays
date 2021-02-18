@@ -1,24 +1,25 @@
 
 # Table of Contents
 
-1.  [Analyse Fréquentielle](#org8dbfc62)
-2.  [(Optionnel : récupérer les arguments de la ligne de commande)](#org36d6014)
-3.  [Variables](#orgbee1510)
-    1.  [text](#orgc885270)
-    2.  [key](#org12bd49c)
-    3.  [alphabet](#org7ee79b4)
-    4.  [etaoinshrdlu](#org0fb105b)
-    5.  [freqLetterCode](#org10c29a8)
-    6.  [keys](#orgaffaae1)
-4.  [Fonctions](#orgc1928f7)
-    1.  [encryptChar](#org3b26e4a)
-    2.  [cypher](#org261026c)
-    3.  [decypher](#org091409a)
-    4.  [listDecypher](#orgdd5cd7f)
+1.  [Analyse Fréquentielle](#org09bb4db)
+2.  [(Optionnel : récupérer les arguments de la ligne de commande)](#org15a7528)
+3.  [Variables](#org02bb875)
+    1.  [text](#orga3f3fec)
+    2.  [key](#org62d5c03)
+    3.  [alphabet](#org4fc5f88)
+    4.  [etaoinshrdlu](#org9063270)
+    5.  [freqLetterCode](#org67ac755)
+    6.  [keys](#org477b820)
+4.  [Fonctions](#org5798ea2)
+    1.  [encryptChar](#org7c89399)
+    2.  [cypher](#org846ff38)
+    3.  [decypher](#org9a9cb49)
+    4.  [listDecypher](#org7b4c214)
+
+[asciinema](https://asciinema.org/a/S3dGEePp6UpjI2RsAJm03Df3f)  
 
 
-
-<a id="org8dbfc62"></a>
+<a id="org09bb4db"></a>
 
 # Analyse Fréquentielle
 
@@ -27,7 +28,7 @@
 [Etaoin shrdlu](https://en.wikipedia.org/wiki/Etaoin_shrdlu)   
 
 
-<a id="org36d6014"></a>
+<a id="org15a7528"></a>
 
 # (Optionnel : récupérer les arguments de la ligne de commande)
 
@@ -40,19 +41,19 @@ Retourne le tableau des arguments passés en ligne de commande
 Pour récupérer le premier argument.  
 
 
-<a id="orgbee1510"></a>
+<a id="org02bb875"></a>
 
 # Variables
 
 
-<a id="orgc885270"></a>
+<a id="orga3f3fec"></a>
 
 ## text
 
 Un tableau dont chaque élément est un caractère (majuscule) ou bien un espace.  
 
 
-<a id="org12bd49c"></a>
+<a id="org62d5c03"></a>
 
 ## key
 
@@ -60,7 +61,7 @@ La clé (sous la forme d'un nombre).
 Cette variable n'est utile que pour chiffrer uniquement !  
 
 
-<a id="org7ee79b4"></a>
+<a id="org4fc5f88"></a>
 
 ## alphabet
 
@@ -72,21 +73,21 @@ alphabet[1] est la deuxième case du tableau, la valeur représente le nombre de
 alphabet[25] est la vingt-sixième case du tableau, la valeur représente le nombre de 'Z' dans le texte chiffré.  
 
 
-<a id="org0fb105b"></a>
+<a id="org9063270"></a>
 
 ## etaoinshrdlu
 
 Un tableau avec les lettres les plus fréquentes en anglais. (De longueur 12)  
 
 
-<a id="org10c29a8"></a>
+<a id="org67ac755"></a>
 
 ## freqLetterCode
 
 C'est l'index du tableau alphabet pour la lettre la plus présente dans le texte chiffré.  
 
 
-<a id="orgaffaae1"></a>
+<a id="org477b820"></a>
 
 ## keys
 
@@ -94,12 +95,12 @@ Un tableau de même longueur que etaoinshrdlu qui contient les décalages (clés
 Cette variable n'est utile que pour dechiffrer uniquement !  
 
 
-<a id="orgc1928f7"></a>
+<a id="org5798ea2"></a>
 
 # Fonctions
 
 
-<a id="org3b26e4a"></a>
+<a id="org7c89399"></a>
 
 ## encryptChar
 
@@ -113,7 +114,7 @@ Renvoie : Le code décimal ASCII de c + n, en restant entre 'A' et 'Z'
 Fonction qui chiffre un caractère c en le décalant de n.  
 
 
-<a id="org261026c"></a>
+<a id="org846ff38"></a>
 
 ## cypher
 
@@ -127,14 +128,14 @@ Renvoie : une chaine de charactère
 Fonction qui chiffre un message à partir du tableau tab avec la clé key.  
 
 
-<a id="org091409a"></a>
+<a id="org9a9cb49"></a>
 
 ## decypher
 
 L'inverse de la fonction cypher.  
 
 
-<a id="orgdd5cd7f"></a>
+<a id="org7b4c214"></a>
 
 ## listDecypher
 
