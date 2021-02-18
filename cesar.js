@@ -8,14 +8,14 @@ let text = process.argv[2].toUpperCase().split('');
 
 
 // Returns ASCII decimal code of `c` shifted by `n`
-function encryptChar(c, n) {
+const encryptChar = (c, n) => {
     if (c.charCodeAt() == 32)
 	return 32;
     return (((c.charCodeAt(0) - 65) + n) % 26) + 65 ;
 }
 
 // Crypt the ciphered text `tab` with `key`
-function cypher(tab, key) {
+const cypher = (tab, key) => {
     let res = '';
 	for (letter of tab)
 	    res += String.fromCharCode(encryptChar(letter, key));
@@ -23,12 +23,12 @@ function cypher(tab, key) {
 }
 
 // Decrypt the ciphered text `tab` with `key`
-function decypher(tab, key) {
+const decypher = (tab, key) => {
     return cypher(tab, 26 - key);
 }
 
 // List the most probable deciphered texts
-function listDecypher(tab) {
+const listDecypher = (tab) => {
     let alphabet = Array(26).fill(0);
 
     // Returns an array with the number of letters in the ciphered text
