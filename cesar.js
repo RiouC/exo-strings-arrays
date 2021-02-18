@@ -58,8 +58,8 @@ const listDecypher = (tab) => {
 	let mapMethod = text.map(function(letter) {
 	    return String.fromCharCode(encryptChar(letter, 26 - key));
 	}).join('');
-	console.log(`Shift of ${key} \t: ${decypher(tab, key)}\t[DECYPHER]`);
-	console.log(`Shift of ${key} \t: ${mapMethod}\t[MAPMETHOD]`);
+	console.log(`[DECYPHER] Shift of ${key} \t: ${decypher(tab, key)}`);
+	console.log(`[MAP\t ] Shift of ${key} \t: ${mapMethod}`);
     }
 }
 
