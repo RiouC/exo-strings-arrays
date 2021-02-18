@@ -43,7 +43,7 @@ const listDecypher = (tab) => {
     // https://en.wikipedia.org/wiki/Etaoin_shrdlu
     let etaoinshrdlu = ['E', 'T', 'A', 'O', 'I', 'N', 'S', 'H', 'R', 'D', 'L', 'U'];
     countLetters(alphabet);
-    console.log(`Frequency : ${alphabet}`);
+    console.log(`Frequency \t: ${alphabet}`);
 
     let freqLetterCode = alphabet.indexOf(Math.max(...alphabet));
     console.log(`Most frequent letter in cypher text : ${String.fromCharCode(freqLetterCode + 65)}`);
@@ -52,14 +52,14 @@ const listDecypher = (tab) => {
     for (let i = 0; i < etaoinshrdlu.length; i++) {
 	keys[i] = ((freqLetterCode - (etaoinshrdlu[i].charCodeAt() - 65)) + 26) % 26;
     }
-    console.log(`Probable keys = ${keys}`);
+    console.log(`Probable keys \t: ${keys}`);
 
     for (key of keys) {
 	let mapMethod = text.map(function(letter) {
 	    return String.fromCharCode(encryptChar(letter, 26 - key));
 	}).join('');
-	console.log(`[DECYPHER] Shift of ${key} : ${decypher(tab, key)}`);
-	console.log(`[MAPMETHOD] Shift of ${key} : ${mapMethod}`);
+	console.log(`Shift of ${key} \t: ${decypher(tab, key)}\t[DECYPHER]`);
+	console.log(`Shift of ${key} \t: ${mapMethod}\t[MAPMETHOD]`);
     }
 }
 
