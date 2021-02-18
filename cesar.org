@@ -9,3 +9,6 @@
 
 * (Optionnel : récupérer les arguments de la ligne de commande)
 
+#+begin_src js
+process.argv
+#+end_src

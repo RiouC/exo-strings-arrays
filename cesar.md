@@ -1,12 +1,12 @@
 
 # Table of Contents
 
-1.  [Analyse Fréquentielle](#orge933093)
-2.  [(Optionnel : récupérer les arguments de la ligne de commande)](#orgd24df03)
+1.  [Analyse Fréquentielle](#org07c9fdb)
+2.  [(Optionnel : récupérer les arguments de la ligne de commande)](#orgb61240a)
 
 
 
-<a id="orge933093"></a>
+<a id="org07c9fdb"></a>
 
 # Analyse Fréquentielle
 
@@ -15,7 +15,9 @@
 [Etaoin shrdlu](https://en.wikipedia.org/wiki/Etaoin_shrdlu)   
 
 
-<a id="orgd24df03"></a>
+<a id="orgb61240a"></a>
 
 # (Optionnel : récupérer les arguments de la ligne de commande)
+
+    process.argv
 
