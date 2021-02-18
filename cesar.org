@@ -1,0 +1,9 @@
+
+* Analyse Fréquentielle
+
+[[https://fr.wikipedia.org/wiki/Fr%C3%A9quence_d%27apparition_des_lettres_en_fran%C3%A7ais][Fréquence d'apparition des lettres en français]] 
+[[https://en.wikipedia.org/wiki/Letter_frequency][Letter Frequency]] 
+[[https://en.wikipedia.org/wiki/Etaoin_shrdlu][Etaoin shrdlu]] 
+
+* (Optionnel : récupérer les arguments de la ligne de commande)
+
