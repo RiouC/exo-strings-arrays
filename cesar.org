@@ -9,6 +9,8 @@
 [[https://en.wikipedia.org/wiki/Letter_frequency][Letter Frequency]] 
 [[https://en.wikipedia.org/wiki/Etaoin_shrdlu][Etaoin shrdlu]] 
 
+[[https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange][ASCII]] 
+
 * (Optionnel : récupérer les arguments de la ligne de commande)
 
 #+begin_src js
